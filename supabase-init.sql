@@ -41,8 +41,8 @@ create table blog_posts (
 
 insert into blog_posts (id, title, slug, excerpt, content, featured_image, author, status, publish_date, categories, tags, meta_title, meta_description, read_time)
 values
-  (uuid_generate_v4(), 'Dubai Property Market Outlook 2025', 'dubai-property-market-2025', 'Comprehensive analysis of Dubai''s real estate market trends, price predictions, and the best investment opportunities for 2025.', '<p>Dubai''s real estate market continues to demonstrate remarkable resilience and growth potential as we enter 2025...</p>', '/placeholder.jpg', 'Shibi Kabeer', 'published', '2025-01-01', ARRAY['Market Analysis'], ARRAY['Dubai', 'Investment'], 'Dubai Property Market Outlook 2025', 'Market trends and investment tips for 2025', 8),
-  (uuid_generate_v4(), 'Golden Visa Updates: New Requirements and Benefits in 2025', 'golden-visa-updates-2025', 'Latest changes to the UAE Golden Visa program and how they affect property investors.', '<p>The UAE Golden Visa program has seen significant updates for 2025...</p>', '/placeholder.jpg', 'Shibi Kabeer', 'published', '2025-01-12', ARRAY['Golden Visa'], ARRAY['Visa', 'UAE'], 'Golden Visa Updates 2025', 'New requirements and benefits for investors', 5);
+  (uuid_generate_v4(), 'Dubai Property Market Outlook 2025', 'dubai-property-market-2025', 'Comprehensive analysis of Dubai''s real estate market trends, price predictions, and the best investment opportunities for 2025.', '<p>Dubai''s real estate market continues to demonstrate remarkable resilience and growth potential as we enter 2025...</p>', 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', 'Shibi Kabeer', 'published', '2025-01-01', ARRAY['Market Analysis'], ARRAY['Dubai', 'Investment'], 'Dubai Property Market Outlook 2025', 'Market trends and investment tips for 2025', 8),
+  (uuid_generate_v4(), 'Golden Visa Updates: New Requirements and Benefits in 2025', 'golden-visa-updates-2025', 'Latest changes to the UAE Golden Visa program and how they affect property investors.', '<p>The UAE Golden Visa program has seen significant updates for 2025...</p>', 'https://images.unsplash.com/photo-1522093014132-d14155f4a73b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', 'Shibi Kabeer', 'published', '2025-01-12', ARRAY['Golden Visa'], ARRAY['Visa', 'UAE'], 'Golden Visa Updates 2025', 'New requirements and benefits for investors', 5);
 
 create table properties (
   id uuid primary key default uuid_generate_v4(),
@@ -64,9 +64,9 @@ create table properties (
 
 insert into properties (id, name, location, developer, price, price_per_sqft, type, size, yield, status, handover, image, features, golden_visa)
 values
-  (uuid_generate_v4(), 'Luxury Apartment in Downtown Dubai', 'Downtown Dubai', 'Emaar', 'AED 2,500,000', '2,083', 'Apartment', '1,200 sq ft', '8%', 'Ready', 'Q4 2024', '/placeholder.jpg', ARRAY['Burj Khalifa View', 'Smart Home', 'Pool'], true),
-  (uuid_generate_v4(), 'Villa in Arabian Ranches', 'Arabian Ranches', 'Damac', 'AED 4,200,000', '1,200', 'Villa', '3,500 sq ft', '9%', 'Off-Plan', 'Q2 2025', '/placeholder.jpg', ARRAY['Private Garden', 'Maid Room', 'Garage'], true),
-  (uuid_generate_v4(), 'Commercial Office in DIFC', 'Dubai International Financial Centre', 'Omniyat', 'AED 1,800,000', '2,250', 'Commercial', '800 sq ft', '10%', 'Ready', 'Q1 2024', '/placeholder.jpg', ARRAY['Prime Location', 'Furnished'], false);
+  (uuid_generate_v4(), 'Luxury Apartment in Downtown Dubai', 'Downtown Dubai', 'Emaar', 'AED 2,500,000', '2,083', 'Apartment', '1,200 sq ft', '8%', 'Ready', 'Q4 2024', 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', ARRAY['Burj Khalifa View', 'Smart Home', 'Pool'], true),
+  (uuid_generate_v4(), 'Villa in Arabian Ranches', 'Arabian Ranches', 'Damac', 'AED 4,200,000', '1,200', 'Villa', '3,500 sq ft', '9%', 'Off-Plan', 'Q2 2025', 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', ARRAY['Private Garden', 'Maid Room', 'Garage'], true),
+  (uuid_generate_v4(), 'Commercial Office in DIFC', 'Dubai International Financial Centre', 'Omniyat', 'AED 1,800,000', '2,250', 'Commercial', '800 sq ft', '10%', 'Ready', 'Q1 2024', 'https://images.unsplash.com/photo-1582462434994-b2921526a353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', ARRAY['Prime Location', 'Furnished'], false);
 
 create table media (
   id uuid primary key default uuid_generate_v4(),

@@ -64,7 +64,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-gradient-to-br from-navy-900/95 via-navy-800/90 to-slate-900/95"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1522093014132-d14155f4a73b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
