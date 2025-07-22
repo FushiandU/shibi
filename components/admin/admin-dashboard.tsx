@@ -19,6 +19,7 @@ import {
 import { AdminSEO } from "./admin-seo"
 import { AdminContent } from "./admin-content"
 import { AdminBlog } from "./admin-blog"
+import { AdminProperties } from "./admin-properties"
 import { AdminLeads } from "./admin-leads"
 import { AdminMedia } from "./admin-media"
 import { AdminTranslations } from "./admin-translations"
@@ -111,6 +112,14 @@ export function AdminDashboard() {
               >
                 <FileText className="h-4 w-4 mr-2" />
                 Blog Management
+              </Button>
+              <Button
+                variant={activeTab === "properties" ? "default" : "ghost"}
+                className="w-full justify-start"
+                onClick={() => setActiveTab("properties")}
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Property Management
               </Button>
               <Button
                 variant={activeTab === "leads" ? "default" : "ghost"}
@@ -240,6 +249,7 @@ export function AdminDashboard() {
 
           {activeTab === "content" && <AdminContent />}
           {activeTab === "blog" && <AdminBlog />}
+          {activeTab === "properties" && <AdminProperties />}
           {activeTab === "leads" && <AdminLeads />}
           {activeTab === "media" && <AdminMedia />}
           {activeTab === "translations" && <AdminTranslations />}
